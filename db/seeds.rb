@@ -6,4 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(username: 'Jay1294', password: 'password', email: 'jayman1294@gmail.com')
+require 'faker'
+
+100.times do 
+  User.create(
+    name: Faker::Name.name,
+    title: Faker::Job.title,
+    field: Faker::Job.field
+  )
+end
