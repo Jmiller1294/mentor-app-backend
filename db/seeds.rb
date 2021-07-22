@@ -9,7 +9,7 @@
 require 'faker'
 
 100.times do 
-  User.create(
+  Mentor.create(
     name: Faker::Name.name,
     title: Faker::Job.title,
     field: Faker::Job.field

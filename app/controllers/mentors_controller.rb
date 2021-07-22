@@ -1,6 +1,6 @@
 class MentorsController < ApplicationController
   def index
-    @mentors = Mentors.all
+    @mentors = Mentor.all
     render json: @mentors
   end
 
