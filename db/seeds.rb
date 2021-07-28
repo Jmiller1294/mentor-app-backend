@@ -8,6 +8,9 @@
 
 require 'faker'
 
+User.create(name: 'Justin Miller', email: 'Jayman1294@gmail.com', password: 'password')
+
+
 100.times do 
   Mentor.create(
     name: Faker::Name.name,
@@ -15,3 +18,5 @@ require 'faker'
     field: Faker::Job.field
   )
 end
+
+
