@@ -15,7 +15,8 @@ User.create(name: 'Justin Miller', email: 'Jayman1294@gmail.com', password: 'pas
   Mentor.create(
     name: Faker::Name.name,
     title: Faker::Job.title,
-    field: Faker::Job.field
+    field: Faker::Job.field,
+    avatar: Faker::Avatar.image
   )
 end
 

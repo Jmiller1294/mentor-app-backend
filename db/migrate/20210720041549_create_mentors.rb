@@ -4,6 +4,7 @@ class CreateMentors < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :title
       t.string :field
+      t.string :avatar
 
       t.timestamps
     end

@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2021_07_20_041549) do
     t.string "name"
     t.string "title"
     t.string "field"
+    t.string "avatar"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

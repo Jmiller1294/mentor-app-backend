@@ -1,8 +1,9 @@
 class SessionsController < ApplicationController
+  require 'pry'
   include CurrentUserConcern
+
   def create
     @user = User.find_by(email: params["email"]).try(:authenticate, params["password"])
-
     if @user
       session[:user_id] = @user.id 
       render json: {
@@ -11,7 +12,7 @@ class SessionsController < ApplicationController
         user: @user
       }
     else 
-      render json: {status: 401}
+      render json: params
     end
   end
 
