@@ -7,17 +7,27 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
+require 'pry'
+
+BASE_URL = 'https://randomuser.me/api/?results=100'
+  
+resp = RestClient.get(BASE_URL) 
+json = JSON.parse(resp) 
+  
+json["results"].each do |mentor|
+  Mentor.create(
+    name: "#{mentor["name"]["first"]} #{mentor["name"]["last"]}", 
+    title: Faker::Job.title, field: Faker::Job.field,
+    avatar: mentor["picture"]["medium"], 
+    city: mentor["location"]["city"], 
+    email: mentor["email"], 
+    age: mentor["dob"]["age"]
+  )
+end
 
 User.create(name: 'Justin Miller', email: 'Jayman1294@gmail.com', password: 'password')
 
 
-100.times do 
-  Mentor.create(
-    name: Faker::Name.name,
-    title: Faker::Job.title,
-    field: Faker::Job.field,
-    avatar: Faker::Avatar.image
-  )
-end
+
 
 
