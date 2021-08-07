@@ -9,7 +9,7 @@
 require 'faker'
 require 'pry'
 
-BASE_URL = 'https://randomuser.me/api/?results=100'
+BASE_URL = 'https://randomuser.me/api/?results=100&nat=us&inc=gender,name,email,location,dob,id,picture'
   
 resp = RestClient.get(BASE_URL) 
 json = JSON.parse(resp) 
