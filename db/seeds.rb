@@ -25,12 +25,33 @@ json["results"].each do |mentor|
   )
 end
 
-user = User.create(name: 'Justin Miller', 
+user1 = User.create(name: 'Justin Miller', 
   email: 'Jayman1294@gmail.com', 
   password: 'password'
 )
 
+mentor1 = Mentor.create(
+  name: 'Justin Miller', 
+  title: 'Software Engineer', 
+  avatar: 'https://images.app.goo.gl/WvfAC8zqRBkWyD517',
+  city: 'New York', 
+  age: '29',
+  field: 'Tech',
+  email: 'jay@1294'
+)
 
+mentor2 = Mentor.create(
+  name: 'Milly Velez', 
+  title: 'Speech Pathologist', 
+  avatar: 'https://images.app.goo.gl/WvfAC8zqRBkWyD517',
+  city: 'New York', 
+  age: '28',
+  field: 'Healthcare',
+  email: 'milly@1000'
+)
+
+booking1 = Booking.create(date: 'today', user: user1, mentor: mentor1)
+booking2 = Booking.create(date: 'today', user: user1, mentor: mentor2)
 
 
 

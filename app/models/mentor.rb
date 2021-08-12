@@ -1,3 +1,4 @@
 class Mentor < ApplicationRecord
-  has_many :users, through: :user_mentors
+  has_many :bookings
+  has_many :users, through: :bookings
 end

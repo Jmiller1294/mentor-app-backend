@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_20_041549) do
+ActiveRecord::Schema.define(version: 2021_08_12_050914) do
+
+  create_table "bookings", force: :cascade do |t|
+    t.string "date"
+    t.integer "user_id", null: false
+    t.integer "mentor_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["mentor_id"], name: "index_bookings_on_mentor_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
 
   create_table "mentors", force: :cascade do |t|
-    t.integer "user_id"
     t.string "name"
     t.string "title"
     t.string "field"
@@ -23,7 +32,6 @@ ActiveRecord::Schema.define(version: 2021_07_20_041549) do
     t.string "age"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_mentors_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,4 +42,6 @@ ActiveRecord::Schema.define(version: 2021_07_20_041549) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "bookings", "mentors"
+  add_foreign_key "bookings", "users"
 end

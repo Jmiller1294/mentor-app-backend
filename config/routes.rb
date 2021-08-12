@@ -3,9 +3,12 @@ Rails.application.routes.draw do
   get :logged_in, to: "sessions#logged_in"
   delete :logout, to: "sessions#logout"
   
+  resources :mentors
   resources :users do 
-    resources :mentors
+    resources :bookings
   end
+
+  
 
   
 end
