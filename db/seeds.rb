@@ -30,14 +30,7 @@ user = User.create(name: 'Justin Miller',
   password: 'password'
 )
 
-Mentor.create(
-  name: 'Justin Miller', 
-  title: 'Software Engineer', 
-  avatar: 'https://images.app.goo.gl/WvfAC8zqRBkWyD517',
-  city: 'New York', 
-  age: '29',
-  user: user
-)
+
 
 
 
