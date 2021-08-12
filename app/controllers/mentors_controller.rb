@@ -8,4 +8,10 @@ class MentorsController < ApplicationController
     @mentor = Mentor.find_by(id: params[:id])
     render json: @mentor
   end
+
+  def create
+    @mentor = @user.mentors.build(params)
+    @mentor.save
+    render json: @mentor
+  end
 end
