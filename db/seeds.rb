@@ -7,9 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 require 'faker'
-require 'pry'
 
-BASE_URL = 'https://randomuser.me/api/?results=100&nat=us&inc=gender,name,email,location,dob,id,picture'
+BASE_URL = 'https://randomuser.me/api/' + 
+'?results=2000&nat=us&inc=gender,name,email,location,dob,id,picture'
   
 resp = RestClient.get(BASE_URL) 
 json = JSON.parse(resp) 
@@ -25,7 +25,10 @@ json["results"].each do |mentor|
   )
 end
 
-User.create(name: 'Justin Miller', email: 'Jayman1294@gmail.com', password: 'password')
+User.create(name: 'Justin Miller', 
+  email: 'Jayman1294@gmail.com', 
+  password: 'password'
+)
 
 
 
