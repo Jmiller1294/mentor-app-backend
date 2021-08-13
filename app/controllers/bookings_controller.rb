@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  require 'pry'
   def index
     @bookings = Booking.all
     render json: @bookings, include: [:mentor]
@@ -7,7 +6,9 @@ class BookingsController < ApplicationController
  
   def create
     user = User.find_by(id: params[:user_id])
-    @booking = user.bookings.build(date: "now", user_id: user.id, mentor_id: params[:id])
+    @booking = user.bookings.build(date: Time.now, 
+      user_id: user.id, 
+      mentor_id: params[:id])
     @booking.save
     render json: @booking
   end
