@@ -50,8 +50,14 @@ mentor2 = Mentor.create(
   email: 'milly@1000'
 )
 
+event1 = Event.create(name: "Meet Up",date: 'Tomorrow',time: "11:00 AM",description: "Event for members to meetup with mentors",location: "New York", likes: 0)
+event2 = Event.create(name: "Networking", date: 'Today', time: "12:00 PM", description: "Grab some drinks and meet with other professionals anbd mentors", location: "Atlanta", likes: 0)
+
 booking1 = Booking.create(date: 'today', user: user1, mentor: mentor1)
 booking2 = Booking.create(date: 'today', user: user1, mentor: mentor2)
+
+attendance1 = Attendance.create(date: Time.now, user: user1, event: event1)
+attendance2 = Attendance.create(date: Time.now, user: user1, event: event2)
 
 
 

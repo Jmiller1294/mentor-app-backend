@@ -11,7 +11,7 @@ class MentorsController < ApplicationController
   end
 
   def create
-    @mentor = Mentor.create(
+    mentor = Mentor.create(
       name: params[:name], 
       title: params[:title], 
       avatar: params[:avatar],
@@ -19,6 +19,6 @@ class MentorsController < ApplicationController
       email: params[:email],
       age: params[:age],
     )
-    render json: @mentor
+    render json: mentor
   end
 end
