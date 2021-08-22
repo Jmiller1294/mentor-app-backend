@@ -52,6 +52,10 @@ mentor2 = Mentor.create(
 
 event1 = Event.create(name: "Meet Up",date: 'Tomorrow',time: "11:00 AM",description: "Event for members to meetup with mentors",location: "New York", likes: 0)
 event2 = Event.create(name: "Networking", date: 'Today', time: "12:00 PM", description: "Grab some drinks and meet with other professionals anbd mentors", location: "Atlanta", likes: 0)
+event3 = Event.create(name: "Meet Up",date: 'Wed',time: "11:00 AM",description: "Meetup with mentors",location: "New York", likes: 0)
+event4 = Event.create(name: "Info Session", date: 'Thurs', time: "12:00 PM", description: "Info session on programs we offer", location: "Atlanta", likes: 0)
+event5 = Event.create(name: "Counseling",date: 'Fri',time: "11:00 AM",description: "Free counseling",location: "New York", likes: 0)
+event6 = Event.create(name: "Meet and Greet", date: 'Today', time: "12:00 PM", description: "Grab some drinks and meet with other professionals anbd mentors", location: "Atlanta", likes: 0)
 
 booking1 = Booking.create(date: 'today', user: user1, mentor: mentor1)
 booking2 = Booking.create(date: 'today', user: user1, mentor: mentor2)
