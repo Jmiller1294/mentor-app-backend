@@ -10,7 +10,10 @@ class SessionsController < ApplicationController
         user: @user
       }
     else 
-      render json: params
+      render json: {
+        logged_in: false,
+        user: nil
+      }
     end
   end
 

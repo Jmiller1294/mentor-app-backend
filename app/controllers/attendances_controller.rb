@@ -1,4 +1,6 @@
 class AttendancesController < ApplicationController
+
+
   def index
     @attendances = Attendance.all
     render json: @attendances, include: [:event]
@@ -16,5 +18,10 @@ class AttendancesController < ApplicationController
       event_id: params[:id])
     attendance.save
     render json: @attendance
+  end
+
+  def destroy
+    attendance = Attendance.find_by(event_id: params[:id])
+    attendance.destroy
   end
 end

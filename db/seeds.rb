@@ -48,7 +48,8 @@ mentor2 = Mentor.create(
   age: '28',
   field: 'Healthcare',
   email: 'milly@1000'
-)
+) 
+
 
 event1 = Event.create(name: "Meet Up",date: 'Tomorrow',time: "10:00 AM",description: "Event for members to meetup with mentors",location: "New York", likes: 17)
 event2 = Event.create(name: "Networking", date: 'Today', time: "12:00 PM", description: "Grab some drinks and meet with other professionals anbd mentors", location: "Atlanta", likes: 45)
