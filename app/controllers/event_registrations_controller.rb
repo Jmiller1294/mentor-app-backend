@@ -9,6 +9,11 @@ class EventRegistrationsController < ApplicationController
     render json: @event_registration
   end 
 
+  def create
+    event_registration = EventRegistration.create(event_registration_params)
+    render json: event_registration
+  end
+
   def destroy 
     event_registration = EventRegistration.find_by(id: params[:id])
     event_registration.destroy
