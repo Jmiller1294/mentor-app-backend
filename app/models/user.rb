@@ -2,8 +2,8 @@ class User < ApplicationRecord
   has_secure_password
 
   has_many :bookings
-  has_many :attendances
-  has_many :events, through: :attendances
+  has_many :event_registrations
+  has_many :events, through: :event_registrations
   has_many :mentors, through: :bookings
 
   validates_presence_of :email

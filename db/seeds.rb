@@ -72,6 +72,6 @@ event16 = Event.create(name: "Info Session",date: 'Tomorrow',time: "11:00 AM",de
 booking1 = Booking.create(date: 'today', user: user1, mentor: mentor1)
 booking2 = Booking.create(date: 'today', user: user1, mentor: mentor2)
 
-attendance1 = Attendance.create(date: Time.now, user: user1, event: event1)
-attendance2 = Attendance.create(date: Time.now, user: user1, event: event2)
+event_registration1 = EventRegistration.create(date: Time.now, user: user1, event: event1)
+event_registration2 = EventRegistration.create(date: Time.now, user: user1, event: event2)
 

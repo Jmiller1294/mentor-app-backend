@@ -5,11 +5,9 @@ Rails.application.routes.draw do
   resources :events
   resources :mentors
   resources :bookings
-  resources :attendances
   resources :contact_infos
-  resources :event_registrations
   resources :users do 
     resources :bookings
-    resources :attendances
+    resources :event_registrations
   end
 end
