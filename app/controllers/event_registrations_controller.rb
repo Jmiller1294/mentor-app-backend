@@ -1,0 +1,4 @@
+class EventRegistrationsController < ApplicationController
+  
+end
+
