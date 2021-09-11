@@ -1,4 +1,5 @@
 class RegistrationsController < ApplicationController
+  
   def create
     @user = User.create(email: params["email"], 
       password: params["password"], 
@@ -16,5 +17,9 @@ class RegistrationsController < ApplicationController
         status: 500
       }
     end
+  end
+
+  def registration_params
+    params.require(:registration).permit(:email, :password)
   end
 end

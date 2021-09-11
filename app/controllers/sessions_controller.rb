@@ -25,6 +25,7 @@ class SessionsController < ApplicationController
         user: @current_user
       }
     else 
+      flash[:message] = 'Invalid username/password combination'
       render json: {
         logged_in: false
       }

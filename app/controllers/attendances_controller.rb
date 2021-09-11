@@ -23,5 +23,6 @@ class AttendancesController < ApplicationController
     attendance = Attendance.find_by(event_id: params[:id])
     attendance.destroy
   end
+  
 end
 

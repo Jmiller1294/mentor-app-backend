@@ -1,5 +1,4 @@
 class MentorsController < ApplicationController
-  require 'pry'
   def index
     @mentors = Mentor.all
     render json: @mentors
@@ -11,14 +10,11 @@ class MentorsController < ApplicationController
   end
 
   def create
-    mentor = Mentor.create(
-      name: params[:name], 
-      title: params[:title], 
-      avatar: params[:avatar],
-      city: params[:city], 
-      email: params[:email],
-      age: params[:age],
-    )
+    mentor = Mentor.create(mentor_params)
     render json: mentor
+  end
+
+  def mentor_params
+    params.require(:mentor).permit(:name, :title, :avatar, :city, :email, :age)
   end
 end

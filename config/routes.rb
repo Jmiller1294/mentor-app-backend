@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :event_registrations
   get :logged_in, to: "sessions#logged_in"
   delete :logout, to: "sessions#logout"
   resources :sessions, only: [:create]
@@ -8,6 +7,7 @@ Rails.application.routes.draw do
   resources :bookings
   resources :attendances
   resources :contact_infos
+  resources :event_registrations
   resources :users do 
     resources :bookings
     resources :attendances

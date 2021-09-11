@@ -10,14 +10,11 @@ class EventsController < ApplicationController
   end
 
   def create
-    event = Event.create(
-      name: params[:name],
-      date: params[:date],
-      time: params[:time],
-      description: params[:description],
-      location: params[:location], 
-      likes: params[:likes]
-    )
+    event = Event.create(event_params)
     render json: event
+  end
+
+  def event_params
+    params.require(:event).permit(:name, :date, :time, :description, :location, :likes)
   end
 end
