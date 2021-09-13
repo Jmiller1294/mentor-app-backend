@@ -11,9 +11,10 @@ class ContactInfosController < ApplicationController
 
   def create
     contact_info = ContactInfo.create(contact_params)
+    render json: contact_info
   end
 
   def contact_params
-    params.require(:contact_info).permit(:name, :email, :phone)
+    params.require(:contact_info).permit(:name, :email, :phone, :message)
   end
 end

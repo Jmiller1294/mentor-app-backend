@@ -30,7 +30,12 @@ user1 = User.create(name: 'Justin Miller',
   password: 'password'
 )
 
-mentor1 = Mentor.create(
+user2 = User.create(name: 'Cynthia Smith-Miller',
+  email: 'amma841@aol.com',
+  password: 'password2'
+)
+
+=begin mentor1 = Mentor.create(
   name: 'Justin Miller', 
   title: 'Software Engineer', 
   avatar: 'https://images.app.goo.gl/WvfAC8zqRBkWyD517',
@@ -38,7 +43,7 @@ mentor1 = Mentor.create(
   age: '29',
   field: 'Tech',
   email: 'jay@1294'
-)
+) 
 
 mentor2 = Mentor.create(
   name: 'Milly Velez', 
@@ -49,7 +54,7 @@ mentor2 = Mentor.create(
   field: 'Healthcare',
   email: 'milly@1000'
 ) 
-
+=end
 
 event1 = Event.create(name: "Meet Up",date: 'Tomorrow',time: "10:00 AM",description: "Event for members to meetup with mentors",location: "New York", likes: 17)
 event2 = Event.create(name: "Networking", date: 'Today', time: "12:00 PM", description: "Grab some drinks and meet with other professionals anbd mentors", location: "Atlanta", likes: 45)
@@ -69,9 +74,9 @@ event15 = Event.create(name: "Brunch",date: 'Today',time: "12:00 PM",description
 event16 = Event.create(name: "Info Session",date: 'Tomorrow',time: "11:00 AM",description: "Info session on programs we offer",location: "New York", likes: 10)
 
 
-booking1 = Booking.create(date: 'today', user: user1, mentor: mentor1)
-booking2 = Booking.create(date: 'today', user: user1, mentor: mentor2)
+=begin booking1 = Booking.create(date: 'today', user: user1, mentor: mentor1)
+booking2 = Booking.create(date: 'today', user: user1, mentor: mentor2) 
+=end
 
-event_registration1 = EventRegistration.create(date: Time.now, user: user1, event: event1)
-event_registration2 = EventRegistration.create(date: Time.now, user: user1, event: event2)
+event_registration1 = EventRegistration.create(date: Time.now,first_name: 'justin', last_name: 'miller', email: 'dfsdfsdfsd@gmail.com', phone_number: '918-444-2222', user: user1, event: event1)
 

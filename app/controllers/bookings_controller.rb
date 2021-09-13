@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user_id: params[:user_id])
     render json: @bookings, include: [:mentor]
   end
 

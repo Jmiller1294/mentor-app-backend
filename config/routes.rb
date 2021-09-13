@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :mentors
   resources :bookings
   resources :contact_infos
+  resources :event_registrations
   resources :users do 
     resources :bookings
     resources :event_registrations
