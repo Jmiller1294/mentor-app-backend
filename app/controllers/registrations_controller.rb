@@ -1,7 +1,9 @@
 class RegistrationsController < ApplicationController
   
   def create
-    @user = User.create(email: params["email"], 
+    @user = User.create(
+      name: params["name"],
+      email: params["email"], 
       password: params["password"], 
       password_confirmation: params["password_confirmation"]
     )
@@ -20,6 +22,6 @@ class RegistrationsController < ApplicationController
   end
 
   def registration_params
-    params.require(:registration).permit(:email, :password)
+    params.require(:registration).permit(:name, :email, :password)
   end
 end
