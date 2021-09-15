@@ -79,4 +79,5 @@ booking2 = Booking.create(date: 'today', user: user1, mentor: mentor2)
 =end
 
 event_registration1 = EventRegistration.create(date: Time.now,first_name: 'justin', last_name: 'miller', email: 'dfsdfsdfsd@gmail.com', phone_number: '918-444-2222', user: user1, event: event1)
-
+appointment1 = Appointment.create(time: "12:00PM", day: "Wednesday", user: user1)
+appointment2 = Appointment.create(time: "1:00PM", day: "Saturday", user: user1)

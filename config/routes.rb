@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   delete :logout, to: "sessions#logout"
   resources :sessions, only: [:create]
   resources :registrations
+  resources :appointments
   resources :events
   resources :mentors
   resources :bookings

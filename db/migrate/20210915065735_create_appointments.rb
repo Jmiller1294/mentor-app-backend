@@ -3,6 +3,7 @@ class CreateAppointments < ActiveRecord::Migration[6.1]
     create_table :appointments do |t|
       t.string :time
       t.string :day
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end

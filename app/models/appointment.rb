@@ -1,3 +1,3 @@
 class Appointment < ApplicationRecord
-  belongs :user
+  belongs_to :user
 end
