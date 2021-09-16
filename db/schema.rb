@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2021_09_15_065735) do
     t.string "time"
     t.string "day"
     t.integer "user_id", null: false
+    t.integer "mentor_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["mentor_id"], name: "index_appointments_on_mentor_id"
     t.index ["user_id"], name: "index_appointments_on_user_id"
   end
 
@@ -85,6 +87,7 @@ ActiveRecord::Schema.define(version: 2021_09_15_065735) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "appointments", "mentors"
   add_foreign_key "appointments", "users"
   add_foreign_key "bookings", "mentors"
   add_foreign_key "bookings", "users"

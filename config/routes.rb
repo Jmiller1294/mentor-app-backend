@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   resources :users do 
     resources :bookings
     resources :event_registrations
+    resources :appointments
   end
 end
