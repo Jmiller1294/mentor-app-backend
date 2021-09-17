@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_secure_password
+  serialize :favorite_ids, Array
 
   has_many :bookings
   has_many :event_registrations
@@ -7,6 +8,6 @@ class User < ApplicationRecord
   has_many :events, through: :event_registrations
   has_many :mentors, through: :bookings
 
-  validates_presence_of :email, :name, :password
-  validates_uniqueness_of :email
+  #validates_presence_of :email, :name, :password
+  #validates_uniqueness_of :email
 end

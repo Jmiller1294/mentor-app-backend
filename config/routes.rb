@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :appointments
   get :logged_in, to: "sessions#logged_in"
   delete :logout, to: "sessions#logout"
+  delete '/favorites' => 'users#delete_favorite_id'
+  post '/favorites' => 'users#add_favorite_id'
   resources :sessions, only: [:create]
   resources :registrations
   resources :appointments

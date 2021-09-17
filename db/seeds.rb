@@ -27,12 +27,12 @@ end
 
 user1 = User.create(name: 'Justin Miller', 
   email: 'Jayman1294@gmail.com', 
-  password: 'password'
+  password: 'password',
 )
 
 user2 = User.create(name: 'Cynthia Smith-Miller',
   email: 'amma841@aol.com',
-  password: 'password2'
+  password: 'password2',
 )
 
 mentor1 = Mentor.create(
