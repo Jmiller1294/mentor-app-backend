@@ -14,7 +14,11 @@ class UsersController < ApplicationController
     user.save
   end
 
-  private
+  def get_favorites
+    user = User.find_by(id: params[:user_id])
+    fav_ids = user.favorite_ids
+    render json: fav_ids
+  end
 
   def add_favorite_id
     user = User.find_by(id: params[:user_id])
@@ -25,6 +29,11 @@ class UsersController < ApplicationController
   end
 
   def delete_favorite_id
-    binding.pry
+    user = User.find_by(id: params[:user][:id])
+    fav_id = params[:id]
+    u = user.favorite_ids
+    u.delete(fav_id.to_i)
+    user.save!
+    render json: user
   end
 end
