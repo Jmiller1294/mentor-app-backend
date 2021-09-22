@@ -10,8 +10,9 @@ class AppointmentsController < ApplicationController
   end
 
   def create
-    mentor = Mentor.find_by(id: params[:mentor_id])
-    appointment = appointment.mentors.build(time: params[:time], day: params[:day], mentor: mentor)
+    mentor = Mentor.find_by(id: params[:mentor][:id])
+    user = User.find_by(id: params[:id])
+    appointment = user.appointments.build(time: params[:time], day: params[:day], mentor: mentor)
     appointment.save
     render json: appointment
   end
