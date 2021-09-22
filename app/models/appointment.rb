@@ -2,4 +2,5 @@ class Appointment < ApplicationRecord
   belongs_to :user
   belongs_to :mentor
   validates_presence_of :day, :time
+  validates_uniqueness_of :day
 end
