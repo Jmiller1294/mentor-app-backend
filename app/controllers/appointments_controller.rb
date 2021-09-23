@@ -18,11 +18,13 @@ class AppointmentsController < ApplicationController
   end
 
   def update
-
+    appointment = Appointment.find(params[:id])
+    appointment.update(time: params[:time], day: params[:day])
+    render json: appointment
   end
 
   def destroy 
-    appointment = Appointment.find_by(id: params[:id])
+    appointment = Appointment.find(params[:id])
     appointment.destroy
     render json: appointment
   end
