@@ -9,6 +9,12 @@ class EventsController < ApplicationController
     render json: @event
   end
 
+  def update
+    event = Event.find_by(id: params[:id])
+    event.update_attribute(:likes, params[:likes])
+    render json: event
+  end
+
   def create
     event = Event.create(event_params)
     render json: event

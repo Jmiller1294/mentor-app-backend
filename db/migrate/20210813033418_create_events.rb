@@ -6,7 +6,7 @@ class CreateEvents < ActiveRecord::Migration[6.1]
       t.string :time
       t.string :description
       t.string :location
-      t.string :likes
+      t.integer :likes
 
       t.timestamps
     end
