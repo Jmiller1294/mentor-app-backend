@@ -26,7 +26,7 @@ json["results"].each do |mentor|
 end
 
 user1 = User.create(name: 'Justin Miller', 
-  email: 'Jayman1294@gmail.com', 
+  email: 'jayman1294@gmail.com', 
   password: 'password',
 )
 

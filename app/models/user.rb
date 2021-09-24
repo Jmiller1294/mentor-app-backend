@@ -8,6 +8,9 @@ class User < ApplicationRecord
   has_many :events, through: :event_registrations
   has_many :mentors, through: :bookings
 
-  #validates_presence_of :email, :name, :password
-  #validates_uniqueness_of :email
+  validates_confirmation_of :password
+  validates :email, uniqueness: true
+  validates :email, presence: true
+  validates :name, presence: true
+  validates :password, presence: true
 end

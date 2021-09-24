@@ -10,8 +10,12 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(params)
-    user.save
+    user = User.create(
+      name: params[:name], 
+      email: params[:email].downcase, 
+      password: params[:password]
+    )
+    
   end
 
   def get_favorites

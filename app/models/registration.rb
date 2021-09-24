@@ -1,2 +1,3 @@
 class Registration < ApplicationRecord
+  
 end

@@ -4,7 +4,7 @@ class RegistrationsController < ApplicationController
     @user = User.create(
       name: params["name"],
       email: params["email"], 
-      password: params["password"], 
+      password: params["password"].downcase, 
       password_confirmation: params["password_confirmation"]
     )
     if @user
