@@ -15,7 +15,6 @@ class UsersController < ApplicationController
       email: params[:email].downcase, 
       password: params[:password]
     )
-    
   end
 
   def get_favorites
