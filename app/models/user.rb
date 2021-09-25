@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :appointments
   has_many :events, through: :event_registrations
   has_many :mentors, through: :bookings
+  has_one_attached :avatar
 
   validates_confirmation_of :password
   validates :email, uniqueness: true

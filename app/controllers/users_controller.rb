@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show 
     @user = User.find_by(id: params[:id])
-    render json: @user, include: [:bookings, :event_registrations, :appointments]
+    render json: @user, include: [:bookings, :event_registrations, :appointments, :avatar]
   end
 
   def create
