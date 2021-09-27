@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 2021_09_25_051030) do
   end
 
   create_table "event_registrations", force: :cascade do |t|
+    t.string "image"
     t.string "date"
     t.string "first_name"
     t.string "last_name"

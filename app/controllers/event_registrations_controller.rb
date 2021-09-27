@@ -12,6 +12,7 @@ class EventRegistrationsController < ApplicationController
   def create
     user = User.find_by(id: params[:user_id])
     event_registration = user.event_registrations.build(
+      image: params[:image],
       date: Time.now, 
       first_name: params[:first],
       last_name: params[:last],

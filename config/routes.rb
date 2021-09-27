@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   delete :logout, to: "sessions#logout"
   delete '/favorites/:id' => 'users#delete_favorite_id'
   post '/favorites' => 'users#add_favorite_id'
+  post 'rails/active_storage/direct_uploads', to: 'direct_uploads#create'
   resources :sessions, only: [:create]
   resources :registrations
   resources :appointments

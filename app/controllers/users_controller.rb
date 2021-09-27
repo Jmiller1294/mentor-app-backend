@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     )
   end
 
+  def update
+    
+  end
+
   def get_favorites
     user = User.find_by(id: params[:user_id])
     fav_ids = user.favorite_ids
