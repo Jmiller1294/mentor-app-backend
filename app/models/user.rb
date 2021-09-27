@@ -11,11 +11,11 @@ class User < ApplicationRecord
 
   validates_confirmation_of :password
   validates :email, uniqueness: true
-  validates :email, presence: true
-  validates :name, presence: true
-  validates :password, presence: true
-  validates :name, length: { minimum: 5 }
+  validates :email, presence: true, on: :create
   validates :email, length: { minimum: 10 }
-  validates :password, length: { in: 6..20 }
+  validates :name, presence: true, on: :create
+  validates :name, length: { minimum: 5 }
+  validates :password, presence: true, on: :create
+  validates :password, length: { in: 6..20 }, on: :create
 
 end

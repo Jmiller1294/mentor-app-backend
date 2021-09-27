@@ -18,7 +18,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    
+    user = User.find(params[:id])
+    user.update_attribute(:avatar, params[:avatar])
+    avatar_url = rails_blob_path(user.avatar)
+    render json: { user: user, avatar_url: avatar_url }
   end
 
   def get_favorites
