@@ -3,7 +3,11 @@ class SessionsController < ApplicationController
   def create
     @user = User.find_by(email: params["email"]).try(:authenticate, params["password"])
     if @user
-      avatar = rails_blob_path(@user.avatar)
+      if @user.avatar.filename != nil
+        avatar = rails_blob_path(@user.avatar)
+      else 
+        avatar = nil;
+      end
       session[:user_id] = @user.id 
       render json: {
         status: :created,

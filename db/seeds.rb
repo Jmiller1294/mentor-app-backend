@@ -29,11 +29,6 @@ user1 = User.create(name: 'Justin Miller',
   email: 'jayman1294@gmail.com', 
   password: 'password',
 )
-user1.avatar.attach(
-  io: File.open('./public/profile_imgs/hacker.png'),
-  filename: 'hacker.png',
-  content_type: 'application/png'
-)
 
 user2 = User.create(name: 'Cynthia Smith-Miller',
   email: 'amma841@aol.com',

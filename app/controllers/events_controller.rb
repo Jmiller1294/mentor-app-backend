@@ -1,7 +1,11 @@
 class EventsController < ApplicationController
   def index
-    events = Event.all
-    render json: events, include: [:image]
+    @events = Event.all
+    @array = []
+    @events.each do |event|
+     @array << { event: event, image: rails_blob_path(event.image)}
+    end
+    render json: @array
   end
 
   def show
