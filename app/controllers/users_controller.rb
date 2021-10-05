@@ -15,6 +15,11 @@ class UsersController < ApplicationController
       email: params[:email].downcase, 
       password: params[:password]
     )
+    if user.valid?
+      render json: user
+    else  
+      render json: user.errors.objects.first.full_message
+    end
   end
 
   def update
