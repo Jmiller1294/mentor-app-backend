@@ -35,27 +35,6 @@ user2 = User.create(name: 'Cynthia Smith-Miller',
   password: 'password2',
 )
 
-mentor1 = Mentor.create(
-  name: 'Justin Miller', 
-  title: 'Software Engineer', 
-  avatar: 'https://images.app.goo.gl/WvfAC8zqRBkWyD517',
-  city: 'New York', 
-  age: '29',
-  field: 'Tech',
-  email: 'jay@1294'
-) 
-
-mentor2 = Mentor.create(
-  name: 'Milly Velez', 
-  title: 'Speech Pathologist', 
-  avatar: 'https://images.app.goo.gl/WvfAC8zqRBkWyD517',
-  city: 'New York', 
-  age: '28',
-  field: 'Healthcare',
-  email: 'milly@1000'
-) 
-
-
 event1 = Event.create(name: "Meet Up",date: 'Tomorrow',time: "10:00 AM",description: "Event for members to meetup with mentors",location: "New York", likes: 17)
 event2 = Event.create(name: "Networking", date: 'Today', time: "12:00 PM", description: "Grab some drinks and meet with other professionals anbd mentors", location: "Atlanta", likes: 45)
 event3 = Event.create(name: "Meet Up",date: 'Oct 30',time: "11:00 AM",description: "Meetup with mentors",location: "New York", likes: 25)
@@ -155,5 +134,3 @@ event16.image.attach(
   content_type: 'application/jpg'
 )
 
-appointment1 = Appointment.create(time: "12:00PM", day: "Wednesday", user: user1, mentor: mentor1)
-appointment2 = Appointment.create(time: "1:00PM", day: "Saturday", user: user1, mentor: mentor1)
