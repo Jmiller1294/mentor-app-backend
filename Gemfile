@@ -9,7 +9,7 @@ gem "administrate"
 gem 'administrate-field-active_storage'
 gem "image_processing"
 
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk-s3', '~> 1'
 
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
