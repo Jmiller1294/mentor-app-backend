@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :mentors
     resources :events
     resources :users
-
     root to: "users#index"
   end
   resources :appointments
@@ -30,4 +29,5 @@ Rails.application.routes.draw do
     resources :event_registrations
     resources :appointments
   end
+  root 'welcome#index'
 end
