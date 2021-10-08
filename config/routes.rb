@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :appointments
+    resources :contact_infos
+    resources :bookings
+    resources :event_registrations
+    resources :mentors
+    resources :events
+    resources :users
+
+    root to: "users#index"
+  end
   resources :appointments
   get :logged_in, to: "sessions#logged_in"
   delete :logout, to: "sessions#logout"
