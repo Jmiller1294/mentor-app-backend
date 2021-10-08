@@ -9,6 +9,8 @@ gem "administrate"
 gem 'administrate-field-active_storage'
 gem "image_processing"
 
+gem "aws-sdk-s3", require: false
+
 gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
