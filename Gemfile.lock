@@ -304,6 +304,7 @@ DEPENDENCIES
   image_processing
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  nokogiri
   pg
   pry
   puma (~> 5.0)

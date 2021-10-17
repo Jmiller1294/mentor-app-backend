@@ -5,6 +5,8 @@ ruby "2.7.0"
 
 gem 'figaro'
 
+gem 'nokogiri', :require => false
+
 gem "administrate"
 gem 'administrate-field-active_storage'
 gem "image_processing"
